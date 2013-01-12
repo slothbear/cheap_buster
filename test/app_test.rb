@@ -8,8 +8,8 @@ class AppTest < MiniTest::Unit::TestCase
     assert_equal 'Sinatra kantas.', last_response.body
   end
 
-  def test_predictions
-    get '/predictions/08819'
+  def test_stop_id_predictions
+    get '/08819'
     assert_equal 200, last_response.status
     assert_match /stop 08819/, last_response.body
   end
