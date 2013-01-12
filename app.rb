@@ -1,7 +1,8 @@
 require 'sinatra'
 
 get '/' do
-  'Sinatra kantas.'
+  'To see predictions for a stop, add the stop identifier
+     to the URL. For instance: cheapbuster.herokuapp.com/00072'
 end
 
 get '/:stop_id' do
