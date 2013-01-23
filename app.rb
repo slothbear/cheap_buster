@@ -1,4 +1,6 @@
 require 'sinatra'
+require_relative 'nextbus'
+include Nextbus
 
 get '/' do
   'To see predictions for a stop, add the stop identifier
@@ -6,6 +8,6 @@ get '/' do
 end
 
 get '/:stop_id' do
-  "Predictions for stop #{params[:stop_id]}:
-     #{rand(10)}, #{rand(10)+10}, #{rand(10)+20}"
+  stop_id = params[:stop_id]
+  "Predictions for stop #{stop_id}: #{predictions(stop_id)}"
 end
