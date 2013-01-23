@@ -14,8 +14,10 @@ class AppTest < MiniTest::Unit::TestCase
   end
 
   def test_stop_predictions
-    get '/00072'
-    assert_match /10, 24, 39/, last_response.body
+    VCR.use_cassette('predictions') do
+      get '/00072'
+      assert_match /10, 24, 39/, last_response.body
+    end
   end
 
   def test_record_predictions
