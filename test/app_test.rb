@@ -13,4 +13,21 @@ class AppTest < MiniTest::Unit::TestCase
     assert_match /stop 08819/, last_response.body
   end
 
+  def test_stop_predictions
+    get '/00072'
+    assert_match /10, 24, 39/, last_response.body
+  end
+
+  def test_record_predictions
+    VCR.use_cassette('predictions') do
+     response = HTTParty.get('http://webservices.nextbus.com/service/publicXMLFeed',
+       :query => {
+         :command => 'predictions',
+         :a => 'mbta',
+         :stopId => '00072'
+         })
+     assert_match /Massachusetts Ave @ Pearl St/, response.body
+    end
+  end
+
 end
