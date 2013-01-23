@@ -7,6 +7,11 @@ require_relative '../app.rb'
 require 'minitest/autorun'
 include Rack::Test::Methods
 
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/cassettes'
+  c.hook_into :webmock
+end
+
 def app
   Sinatra::Application
 end
