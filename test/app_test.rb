@@ -7,12 +7,6 @@ class AppTest < MiniTest::Unit::TestCase
     assert_equal 200,last_response.status
   end
 
-  def test_prediction_handler
-    get '/08819'
-    assert_equal 200, last_response.status
-    assert_match /stop 08819/, last_response.body
-  end
-
   def test_stop_predictions
     VCR.use_cassette('predictions') do
       get '/00072'
