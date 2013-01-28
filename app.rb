@@ -10,7 +10,7 @@ get '/' do
 
   <p>Look up MBTA stop identifiers at
   <a href="http://www.nextbus.com/predictor/stopSelector.jsp?a=mbta">
-  NextBus</a></p>
+  NextBus</a>.</p>
 
   <p>Cheap Buster has only been tested with the MBTA so far.
   If you would like to use it with a different transit

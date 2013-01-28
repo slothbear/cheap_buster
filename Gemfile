@@ -11,4 +11,5 @@ group :development,:test do
   gem 'rack-test', '~> 0.6.2'
   gem 'webmock', '~> 1.9.0'
   gem 'vcr', '~> 2.4.0'
+  gem 'awesome_print', '~> 1.1.0'
 end
