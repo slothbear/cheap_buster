@@ -1,4 +1,5 @@
 ENV['RACK_ENV'] = 'test'
+NEXTBUS = "http://webservices.nextbus.com/service/publicXMLFeed"
 
 require 'bundler/setup'
 Bundler.require :default, :test

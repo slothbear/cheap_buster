@@ -2,15 +2,14 @@ require_relative 'test_helper'
 
 class AppTest < MiniTest::Unit::TestCase
 
-  def test_record_predictions
-    VCR.use_cassette('predictions') do
-     response = HTTParty.get('http://webservices.nextbus.com/service/publicXMLFeed',
-       :query => {
-         :command => 'predictions',
-         :a => 'mbta',
-         :stopId => '00072'
-         })
-     assert_match /Massachusetts Ave @ Pearl St/, response.body
+  def test_benton_square_02108
+    VCR.use_cassette('stop_02108') do
+     response = HTTParty.get(NEXTBUS, :query => {
+       :command => 'predictions',
+       :a => 'mbta',
+       :stopId => '02108'
+       })
+     assert_match /Benton Square/, response.body
     end
   end
 
