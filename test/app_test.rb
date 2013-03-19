@@ -1,14 +1,12 @@
 require_relative 'test_helper'
 
+BENTON_SQUARE = { :command => 'predictions', :a => 'mbta', :stopId => '02108' }
+
 class AppTest < MiniTest::Unit::TestCase
 
-  def test_benton_square_02108
-    VCR.use_cassette('stop_02108') do
-     response = HTTParty.get(NEXTBUS, :query => {
-       :command => 'predictions',
-       :a => 'mbta',
-       :stopId => '02108'
-       })
+  def test_benton_square
+    VCR.use_cassette('benton_square') do
+     response = HTTParty.get(NEXTBUS, :query => BENTON_SQUARE)
      assert_match /Benton Square/, response.body
     end
   end

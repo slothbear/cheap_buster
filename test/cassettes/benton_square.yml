@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://webservices.nextbus.com/service/publicXMLFeed?a=mbta&command=predictions&stopId=02108
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Mar 2013 16:54:35 GMT
+      Server:
+      - Apache/2.2.4 (Unix) mod_ssl/2.2.4 OpenSSL/0.9.7m DAV/2 mod_jk/1.2.30
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Length:
+      - '1230'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - text/xml
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\" ?> \n<body copyright=\"All
+        data copyright MBTA 2013.\">\n<predictions agencyTitle=\"MBTA\" routeTitle=\"73\"
+        routeTag=\"73\" stopTitle=\"Trapelo Rd @ Belmont St - Benton Square\" stopTag=\"2108\">\n
+        \ <direction title=\"Harvard Station via Mt. Auburn\">\n  <prediction epochTime=\"1363712767523\"
+        seconds=\"692\" minutes=\"11\" isDeparture=\"false\" affectedByLayover=\"true\"
+        dirTag=\"73_1_var2\" vehicle=\"4104\" block=\"T73_24\" tripTag=\"19364399\"
+        />\n  <prediction epochTime=\"1363713667523\" seconds=\"1592\" minutes=\"26\"
+        isDeparture=\"false\" affectedByLayover=\"true\" dirTag=\"73_1_var2\" vehicle=\"4108\"
+        block=\"T73_34\" tripTag=\"19364536\" />\n  <prediction epochTime=\"1363714567523\"
+        seconds=\"2492\" minutes=\"41\" isDeparture=\"false\" affectedByLayover=\"true\"
+        dirTag=\"73_1_var2\" vehicle=\"4105\" block=\"T73_38\" tripTag=\"19364595\"
+        />\n  <prediction epochTime=\"1363715467523\" seconds=\"3392\" minutes=\"56\"
+        isDeparture=\"false\" affectedByLayover=\"true\" dirTag=\"73_1_var2\" vehicle=\"4101\"
+        block=\"T73_21\" tripTag=\"19364353\" />\n  <prediction epochTime=\"1363716367523\"
+        seconds=\"4292\" minutes=\"71\" isDeparture=\"false\" affectedByLayover=\"true\"
+        dirTag=\"73_1_var2\" vehicle=\"4104\" block=\"T73_24\" tripTag=\"19364413\"
+        />\n  </direction>\n</predictions>\n</body>\n"
+    http_version: 
+  recorded_at: Tue, 19 Mar 2013 16:54:35 GMT
+recorded_with: VCR 2.4.0
