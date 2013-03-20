@@ -24,4 +24,11 @@ class AppTest < MiniTest::Unit::TestCase
     assert last_response.ok?
     assert_match 'Cheap Buster', last_response.body
   end
+
+  def test_post_begats_email
+    post '/6175551212'
+    assert last_response.ok?
+    assert_match '6175551212', last_response.body
+  end
+
 end
