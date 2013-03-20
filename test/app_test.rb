@@ -19,4 +19,9 @@ class AppTest < MiniTest::Unit::TestCase
     end
   end
 
+  def test_root
+    get '/'
+    assert last_response.ok?
+    assert_match 'Cheap Buster', last_response.body
+  end
 end
