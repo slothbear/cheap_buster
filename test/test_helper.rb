@@ -13,6 +13,10 @@ VCR.configure do |c|
   c.hook_into :webmock
 end
 
+Mail.defaults do
+  delivery_method :test
+end
+
 def app
   Sinatra::Application
 end

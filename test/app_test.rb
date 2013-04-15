@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require_relative '../nextbus.rb'
+require 'mail'
 
 BENTON_SQUARE_ID = '02108'
 BENTON_SQUARE = { :command => 'predictions', :a => 'mbta', :stopId => '02108' }
@@ -28,7 +29,15 @@ class AppTest < MiniTest::Unit::TestCase
   def test_post_begats_email
     post '/6175551212'
     assert last_response.ok?
-    assert_match '6175551212', last_response.body
+
+    Mail.deliver do
+      to 'farbot@example.com'
+      from 'cheapbuster@gmail.com'
+    end
+
+    deliveries = Mail::TestMailer.deliveries
+    assert_equal 1, deliveries.length
+    assert_equal 'farbot@example.com', deliveries[0].to.first
   end
 
 end
