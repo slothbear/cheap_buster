@@ -30,11 +30,6 @@ class AppTest < MiniTest::Unit::TestCase
     post '/6175551212'
     assert last_response.ok?
 
-    Mail.deliver do
-      to 'farbot@example.com'
-      from 'cheapbuster@gmail.com'
-    end
-
     deliveries = Mail::TestMailer.deliveries
     assert_equal 1, deliveries.length
     assert_equal 'farbot@example.com', deliveries[0].to.first

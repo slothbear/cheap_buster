@@ -9,4 +9,9 @@ end
 
 post '/:telephone' do
   "Getting predictions for #{params['telephone']}"
+
+  Mail.deliver do
+    to 'farbot@example.com'
+    from 'cheapbuster@gmail.com'
+  end
 end
