@@ -5,6 +5,7 @@ require 'bundler/setup'
 Bundler.require :default, :test
 
 require_relative '../app.rb'
+require_relative '../user.rb'
 require_relative '../nextbus.rb'
 
 require 'mail'

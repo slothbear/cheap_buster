@@ -7,11 +7,11 @@ get '/' do
   </p>'
 end
 
-post '/:telephone' do
-  "Getting predictions for #{params['telephone']}"
+post '/:phone' do
+  phone = params[:phone]
 
   Mail.deliver do
-    to 'farbot@example.com'
+    to User.find(phone).email
     from 'cheapbuster@gmail.com'
   end
 end

@@ -24,13 +24,14 @@ class AppTest < MiniTest::Unit::TestCase
     assert_match 'Cheap Buster', last_response.body
   end
 
-  def test_post_begats_email
-    post '/6175551212'
+  def test_post_sends_email
+    user = User.find('6175551212')
+    post user.phone
     assert last_response.ok?
 
     deliveries = Mail::TestMailer.deliveries
     assert_equal 1, deliveries.length
-    assert_equal 'farbot@example.com', deliveries[0].to.first
+    assert_equal user.email, deliveries[0].to.first
   end
 
 end
