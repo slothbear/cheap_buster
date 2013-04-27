@@ -1,4 +1,4 @@
-about cheap_buster
+about
 ===
 
 This utility saves money for those who use a feature phone
@@ -23,13 +23,13 @@ NextBus does allow you to save a query for future use
 (saving us the 70 vs 70A question), but
 the minimum interaction still requires two text messages.
 
-cheap_buster provides the following benefits:
+benefits:
 
 1. costs one text message
 1. provides predictions for more than one route
 1. sends the prediction via email or text message
 
-cheap_buster has these limitations:
+limitations:
 
 1. pre-registration of your routes is required (no
 ad-hoc queries)
