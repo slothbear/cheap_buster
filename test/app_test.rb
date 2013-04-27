@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require_relative '../nextbus.rb'
-require 'mail'
 
 BENTON_SQUARE_ID = '02108'
 BENTON_SQUARE_QUERY = { :command => 'predictions', :a => 'mbta', :stopId => '02108' }
