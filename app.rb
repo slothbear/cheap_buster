@@ -7,9 +7,7 @@ get '/' do
   </p>'
 end
 
-post '/:phone' do
-  phone = params[:phone]
-
+post '/:phone' do |phone|
   Mail.deliver do
     to User.find(phone).email
     from 'cheapbuster@gmail.com'
