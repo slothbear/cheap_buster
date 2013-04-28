@@ -8,7 +8,6 @@ require_relative '../app.rb'
 require_relative '../user.rb'
 require_relative '../nextbus.rb'
 
-require 'mail'
 require 'minitest/autorun'
 require 'minitest/pride'
 include Rack::Test::Methods

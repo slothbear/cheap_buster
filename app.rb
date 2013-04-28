@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'mail'
 
 get '/' do
   '<p>
