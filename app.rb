@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'mail'
+require_relative 'user.rb'
+require_relative 'nextbus.rb'
 
 get '/' do
   '<p>
