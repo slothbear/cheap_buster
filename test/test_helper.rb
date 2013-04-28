@@ -9,6 +9,9 @@ require 'minitest/autorun'
 require 'minitest/pride'
 include Rack::Test::Methods
 
+include Capybara::DSL
+Capybara.app = Sinatra::Application
+
 VCR.configure do |c|
   c.cassette_library_dir = 'test/cassettes'
   c.hook_into :webmock

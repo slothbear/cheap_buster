@@ -13,4 +13,5 @@ group :development,:test do
   gem 'webmock', '~> 1.9.0'
   gem 'vcr', '~> 2.4.0'
   gem 'awesome_print', '~> 1.1.0'
+  gem 'capybara', '~> 2.1.0'
 end
