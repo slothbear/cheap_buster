@@ -1,14 +1,13 @@
 class User
+  attr_reader :phone, :email
+
+  def initialize(phone, email)
+    @phone = phone
+    @email = email
+  end
+
   def self.find(phone)
-    raise "unknown phone" unless phone == '6175551212'
-    User.new
+    User.new(phone, 'farbot@example.com')
   end
 
-  def phone
-    '6175551212'
-  end
-
-  def email
-    'farbot@example.com'
-  end
 end
