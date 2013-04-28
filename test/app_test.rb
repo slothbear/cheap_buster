@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 
+NEXTBUS = "http://webservices.nextbus.com/service/publicXMLFeed"
 BENTON_SQUARE_ID = '02108'
 BENTON_SQUARE_QUERY = { :command => 'predictions', :a => 'mbta', :stopId => '02108' }
 
