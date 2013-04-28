@@ -42,12 +42,15 @@ operation
 ===
 [*Seven of Nine* says: "elaborate"]
 
-* phone call
-* Google Voice
-* CloudMailin
-* NextBus
-* Mandrill (MailChimp)
-* Amazon SNS
+* call from any phone (probably a feature phone)
+* Google Voice receives call, sends "missed call" email
+* CloudMailin translates the email into a POST request
+* Sinatra application looks up phone number, finds user's bus routes
+* query NextBus for bus predictions
+* based on user's notification preference:
+    * send predictions via email (Mandrill/MailChimp)
+    * send predictions via text message (Amazon Simple Notification Service)
+    * [evaluate: SNS can do both email and text message, plus HTTP & SQS. Perhaps use it for all notifications?]
 
 
 
