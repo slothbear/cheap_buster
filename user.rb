@@ -7,7 +7,7 @@ class User
   end
 
   def self.find(phone)
-    User.new(phone, 'farbot@example.com')
+    User.new(phone, 'test@example.com')
   end
 
 end
