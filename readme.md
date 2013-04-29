@@ -48,8 +48,8 @@ operation
 * *Sinatra* application looks up phone number, finds user's bus stops
 * query *NextBus* for arrival predictions
 * based on user's notification preference:
-    * send predictions via email (*Mandrill*/*MailChimp*)
-    * send predictions via text message (*Amazon Simple Notification Service*)
+    * send predictions via email ( *Mandrill/MailChimp* )
+    * send predictions via text message ( *Amazon Simple Notification Service* )
     * [ **evaluate**: SNS can do both email and text message, plus HTTP & SQS. Perhaps use it for all notifications? ]
 
 
