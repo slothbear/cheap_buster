@@ -4,10 +4,7 @@ require_relative 'user.rb'
 require_relative 'nextbus.rb'
 
 get '/' do
-  '<p>
-    Read more about
-    <a href="http://github.com/slothbear/cheap_buster">Cheap Buster</a>
-  </p>'
+  erb :index
 end
 
 post '/:phone' do |phone|
