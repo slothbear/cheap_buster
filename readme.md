@@ -1,5 +1,5 @@
 about
-===
+---
 
 This utility saves money for those who use a feature phone
 to access the [NextBus][NextBus] service for bus predictions
@@ -39,7 +39,7 @@ ad-hoc queries)
 response may be delayed while the application wakes.
 
 operation
-===
+---
 [ *Seven of Nine* says: "elaborate" ]
 
 * call from any phone (probably a feature phone)
