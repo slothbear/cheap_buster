@@ -20,7 +20,7 @@ Cost: Four text messages. Plus I don't get predictions
 for route 70A, which would also work for me.
 
 NextBus does allow you to save a query for future use
-(saving us the 70 vs 70A question), but
+(saving us question 2 for the specific route), but
 the minimum interaction still requires two text messages.
 
 benefits
