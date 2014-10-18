@@ -23,12 +23,12 @@ NextBus does allow you to save a query for future use
 (saving us question 2 for the specific route), but
 the minimum interaction still requires two text messages.
 
-benefits
+benefits of Cheap Buster
 ---
 
-1. costs one text message
+1. costs one text message per query
 1. provides predictions for more than one route
-1. sends the prediction via email or text message
+1. sends the prediction via email or text message (which is cheaper for you?)
 
 limitations
 ---
@@ -52,6 +52,8 @@ operation
     * send predictions via text message ( *Amazon Simple Notification Service* )
     * [ **evaluate**: SNS can do both email and text message, plus HTTP & SQS. Perhaps use it for all notifications? ]
 
-
+enhancements?
+---
+* schedule a query for a particular time (instead of calling)
 
 [NextBus]:http://nextbus.com
